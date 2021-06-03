@@ -5,10 +5,10 @@
 // percentages for responsive mackups of 1024 px
 
 const responsive = {
-  xs: '.3125',
-  md: '.703125',
-  lg: '1',
-  xl: '1.25',
+  xs: '.222222222',
+  md: '.533333333',
+  lg: '.711111111',
+  xl: '.888888889',
 }
 // sizes in min and max width - height
 
@@ -135,6 +135,27 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      colors: {
+        white: '#FFFFFF',
+        dark: '#070724',
+        'grey-dark': '#38384F',
+        'grey-light': '#838391',
+        'blue-own': '#419EBB',
+        'blue-dark': '#2d68f0',
+        'yellow-own': '#EDA249',
+        'purple-own': '#6f2ed6',
+        'orange-own': '#CD5120',
+        'orange-dark': '#D14C32',
+        'red-own': '#D83A34',
+        'green-own': '#1ec2a4',
+      },
+      screens: {
+        xs: '320px',
+      },
+      fontFamily: {
+        antonio: ['Antonio', 'sans-serif'],
+        spartan: ['Spartan', 'sans-serif'],
+      },
       fontSize: fontSizes,
       lineHeight: fontSizes,
       spacing: {
