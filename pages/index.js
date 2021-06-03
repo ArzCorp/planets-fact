@@ -1,8 +1,10 @@
+import Header from 'components/header'
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <>
+      <Header />
       <main className="min-h-screen flex justify-center items-center mb-5-xs md:mb-5-md lg:mb-5-lg xl:mb-5-xl">
         <h1 className="font-spartan text-center text-4xl-xl md:text-4xl-md lg:text-4xl-lg xl:text-4xl-xl">
           Welcome to{' '}
