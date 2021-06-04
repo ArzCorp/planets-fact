@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
+import NavLinkResponsive from './nav-link-responsive'
 
 const NavbarResponsive = () => {
   const [toggle, setToggle] = useState(false)
   const [navbarHeight, setNavbarHeight] = useState()
+
   const isVisible = toggle ? 'block' : 'hidden'
   const isOpen = toggle ? 'opacity-25' : 'opacity-100'
 
@@ -14,77 +16,35 @@ const NavbarResponsive = () => {
   return (
     <div className="block md:hidden font-spartan font-bold text-md leading-lg">
       <button className="focus:outline-none" onClick={() => setToggle(!toggle)}>
-        <i className={`fas fa-bars text-lg leading-lg ${isOpen}`} />
+        <i className={`fas fa-bars text-lg leading-lg ${isOpen}`} aria-hidden />
       </button>
-      <ul
-        className={`${isVisible} bg-dark absolute left-0 right-0 bottom-0`}
-        style={{ top: `${navbarHeight}px` }}
-      >
-        <li>
-          <a
+      <nav>
+        <ul
+          className={`${isVisible} bg-dark absolute left-0 right-0`}
+          style={{ top: `${navbarHeight}px` }}
+        >
+          <NavLinkResponsive
+            title="mercury"
+            dotColor="#DEF4FC"
             href="/mercury"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            mercury
-          </a>
-        </li>
-        <li>
-          <a
-            href="/venus"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            venus
-          </a>
-        </li>
-        <li>
-          <a
-            href="/earth"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            earth
-          </a>
-        </li>
-        <li>
-          <a
-            href="/mars"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            mars
-          </a>
-        </li>
-        <li>
-          <a
+          />
+          <NavLinkResponsive title="venus" dotColor="#F7CC7F" href="/venus" />
+          <NavLinkResponsive title="earth" dotColor="#545BFE" href="/earth" />
+          <NavLinkResponsive title="mars" dotColor="#FF6A45" href="/mars" />
+          <NavLinkResponsive
+            title="jupiter"
+            dotColor="#ECAD7A"
             href="/jupiter"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            jupiter
-          </a>
-        </li>
-        <li>
-          <a
-            href="/saturn"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            saturn
-          </a>
-        </li>
-        <li>
-          <a
-            href="/uranus"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            uranus
-          </a>
-        </li>
-        <li>
-          <a
+          />
+          <NavLinkResponsive title="saturn" dotColor="#FCCB6B" href="/saturn" />
+          <NavLinkResponsive title="uranus" dotColor="#65F0D5" href="/uranus" />
+          <NavLinkResponsive
+            title="neptune"
+            dotColor="#497EFA"
             href="/neptune"
-            className="uppercase mx-3-xs md:mx-3-md lg:mx-3-lg xl:mx-3-xl"
-          >
-            neptune
-          </a>
-        </li>
-      </ul>
+          />
+        </ul>
+      </nav>
     </div>
   )
 }
