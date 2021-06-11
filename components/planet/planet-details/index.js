@@ -1,5 +1,5 @@
-import ButtonLink from 'components/botton-link'
 import { useEffect, useState } from 'react'
+import PlanetNavbar from '../planet-navbar'
 
 const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
   const [headerSize, setHeaderSize] = useState()
@@ -42,19 +42,7 @@ const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
             </a>
             <i className="fas fa-external-link-square-alt text-grey-light"></i>
           </p>
-          <div>
-            <ButtonLink title="OVERVIEW" accountant="01" uppercase={true} />
-            <ButtonLink
-              title="Internal Structure"
-              accountant="02"
-              uppercase={true}
-            />
-            <ButtonLink
-              title="Surface Geology"
-              accountant="03"
-              uppercase={true}
-            />
-          </div>
+          <PlanetNavbar />
         </div>
       </div>
     </section>
