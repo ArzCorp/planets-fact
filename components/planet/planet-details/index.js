@@ -1,3 +1,4 @@
+import ButtonLink from 'components/botton-link'
 import { useEffect, useState } from 'react'
 
 const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
@@ -31,7 +32,7 @@ const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
           <p className="mb-6 md:mb-6-md lg:mb-6-lg xl:mb-6-xl">
             {planetDescription}
           </p>
-          <span>
+          <p className="mb-9 md:mb-9-md lg:mb-9-lg xl:mb-9-xl">
             Source :{' '}
             <a
               href={sourceLink}
@@ -40,7 +41,20 @@ const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
               Wikipedia
             </a>
             <i className="fas fa-external-link-square-alt text-grey-light"></i>
-          </span>
+          </p>
+          <div>
+            <ButtonLink title="OVERVIEW" accountant="01" uppercase={true} />
+            <ButtonLink
+              title="Internal Structure"
+              accountant="02"
+              uppercase={true}
+            />
+            <ButtonLink
+              title="Surface Geology"
+              accountant="03"
+              uppercase={true}
+            />
+          </div>
         </div>
       </div>
     </section>
