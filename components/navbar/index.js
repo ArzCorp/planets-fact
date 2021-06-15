@@ -2,7 +2,7 @@ import NavLink from './nav-link'
 
 const Navbar = () => {
   return (
-    <div className="hidden md:block font-spartan font-bold text-sm-xs md:text-sm-md lg:text-sm-lg xl:text-sm-xl leading-lg-xs md:leading-lg-md lg:leading-lg-lg xl:leading-lg-xl">
+    <div className="text-white-opacity hidden md:block font-spartan font-bold text-sm leading-lg">
       <nav>
         <ul className="flex items-center justify-center lg:justify-start">
           <NavLink title="mercury" href="/mercury" />

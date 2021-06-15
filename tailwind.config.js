@@ -187,6 +187,7 @@ module.exports = {
     extend: {
       colors: {
         white: '#FFFFFF',
+        'white-opacity': '#c1c1c8',
         dark: '#070724',
         'grey-dark': '#38384F',
         'grey-light': '#838391',
