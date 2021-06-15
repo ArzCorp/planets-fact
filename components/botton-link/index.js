@@ -28,7 +28,7 @@ const ButtonLink = ({
       }}
     >
       <a
-        className={`${isDisabled} ${isLowercase} ${isUppercase} ${textColor} ${bgColor} block font-spartan border border-white border-opacity-30 hover:bg-grey-dark focus:bg-blue-own pl-7 md:pl-7-md lg:pl-7-lg xl:pl-7-xl py-4 md:py-4-md lg:py-4-lg xl:py-4-xl mb-4 md:mb-4-md lg:mb-4-lg xl:mb-4-xl text-sm md:text-sm-md lg:text-sm-lg xl:text-sm-xl leading-lg md:leading-lg-md lg:leading-lg-lg xl:leading-lg-xl`}
+        className={`${isDisabled} ${isLowercase} ${isUppercase} ${textColor} ${bgColor} block font-spartan border border-white border-opacity-30 hover:bg-grey-dark focus:bg-blue-own pl-7 md:pl-5 lg:pl-7-lg xl:pl-7-xl py-4 md:py-2 lg:py-4-lg xl:py-4-xl mb-4 md:mb-4-md lg:mb-4-lg xl:mb-4-xl text-sm md:text-xs lg:text-sm-lg xl:text-sm-xl leading-lg md:leading-xl lg:leading-lg-lg xl:leading-lg-xl`}
         onClick={onClick}
         id={id}
       >

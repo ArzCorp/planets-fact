@@ -2,7 +2,7 @@ import ButtonLink from 'components/botton-link'
 
 const PlanetNavbar = () => {
   return (
-    <section>
+    <section className="hidden md:block w-4/12 lg:w-full">
       <ButtonLink
         id="overview"
         title="OVERVIEW"
