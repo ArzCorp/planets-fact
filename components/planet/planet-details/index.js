@@ -1,22 +1,8 @@
-import { useEffect, useState } from 'react'
 import PlanetNavbar from '../planet-navbar'
 
 const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
-  const [headerSize, setHeaderSize] = useState()
-
-  useEffect(() => {
-    const header = document.querySelector('#header')
-    setHeaderSize(header.offsetHeight)
-  }, [])
-
   return (
-    <section
-      className="text-white bg-dark font-spartan pt-32 md:pt-32-md lg:pt-32-lg xl:pt-32-xl"
-      style={{
-        backgroundImage: 'url(/img/bg/background-stars.svg)',
-        minHeight: `calc(100vh - ${headerSize}px)`,
-      }}
-    >
+    <section className="text-white font-spartan pt-32 md:pt-32-md lg:pt-32-lg xl:pt-32-xl pb-22 md:pb-22-md lg:pb-22-lg xl:pb-22-xl">
       <div className="w-10/12 mx-auto flex">
         <div className="w-8/12 flex items-center">
           <img
