@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import PlanetDetails from './planet-details'
+import PlanetDetails from './planet-description'
 import PlanetStats from './planet-stats'
 
 const Planet = () => {

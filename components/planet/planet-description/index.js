@@ -1,6 +1,6 @@
 import PlanetNavbar from '../planet-navbar'
 
-const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
+const PlanetDescription = ({ planetName, planetDescription, sourceLink }) => {
   return (
     <section className="text-white font-spartan pt-24 md:pt-56 lg:pt-48 pb-0 lg:pb-22">
       <div className="block lg:flex w-11/12 lg:w-10/12 mx-auto">
@@ -37,4 +37,4 @@ const PlanetDetails = ({ planetName, planetDescription, sourceLink }) => {
   )
 }
 
-export default PlanetDetails
+export default PlanetDescription
