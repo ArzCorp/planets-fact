@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import PlanetDetails from './planet-details'
-import PlanetInfo from './planet-info'
+import PlanetStats from './planet-stats'
 
 const Planet = () => {
   const [headerSize, setHeaderSize] = useState()
@@ -26,7 +26,7 @@ const Planet = () => {
           of all the Sun's planets. Mercury is one of four terrestrial
           planets in the Solar System, and is a rocky body like Earth."
       />
-      <PlanetInfo />
+      <PlanetStats />
     </section>
   )
 }
