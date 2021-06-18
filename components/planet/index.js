@@ -13,7 +13,7 @@ const Planet = () => {
     const url =
       window.location.origin === 'http://localhost:3000'
         ? 'http://localhost:3000/api'
-        : 'https://planets-fact-6hrbxmsm6-arzatecompany.vercel.app/api'
+        : 'https://planets-fact.vercel.app/api/'
 
     const response = await fetch(url + router.pathname)
     const data = await response.json()
