@@ -1,14 +1,32 @@
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 
 import PlanetDetails from './planet-description'
 import PlanetStats from './planet-stats'
 
 const Planet = () => {
+  const router = useRouter()
+  const [planet, setPlanet] = useState()
   const [headerSize, setHeaderSize] = useState()
+
+  const getData = async () => {
+    const url =
+      window.location.origin === 'http://localhost:3000'
+        ? 'http://localhost:3000/api'
+        : 'https://planets-fact-6hrbxmsm6-arzatecompany.vercel.app/api'
+
+    const response = await fetch(url + router.pathname)
+    const data = await response.json()
+    setPlanet(data)
+  }
 
   useEffect(() => {
     const header = document.querySelector('#header')
     setHeaderSize(header.offsetHeight)
+  }, [])
+
+  useEffect(() => {
+    getData()
   }, [])
 
   return (
@@ -19,14 +37,14 @@ const Planet = () => {
         minHeight: `calc(100vh - ${headerSize}px)`,
       }}
     >
-      <PlanetDetails
-        planetName="mercury"
-        planetDescription="Mercury is the smallest planet in the Solar System and the closest to
-          the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest
-          of all the Sun's planets. Mercury is one of four terrestrial
-          planets in the Solar System, and is a rocky body like Earth."
-      />
-      <PlanetStats />
+      {planet ? (
+        <>
+          <PlanetDetails planetData={planet} />
+          <PlanetStats />
+        </>
+      ) : (
+        <h2>Cargando</h2>
+      )}
     </section>
   )
 }

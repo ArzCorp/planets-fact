@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import 'styles/globals.css'
 
+import Layout from 'components/layout'
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -20,7 +22,9 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   )
 }
