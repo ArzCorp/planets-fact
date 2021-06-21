@@ -4,9 +4,13 @@ const NavLinkResponsive = ({
   title = 'title',
   dotColor = '#979797',
   href = '#',
+  onClick = () => {},
 }) => {
   return (
-    <li className="flex items-center justify-between w-10/12 mx-auto border-b py-5 border-grey-light">
+    <li
+      className="flex items-center justify-between w-10/12 mx-auto border-b py-5 border-grey-light"
+      onClick={onClick}
+    >
       <div className="flex items-center">
         <span
           className="mr-5 block text-transparent h-5 w-5 rounded-full"

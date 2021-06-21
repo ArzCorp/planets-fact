@@ -12,6 +12,7 @@
     "content": "The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.",
     "source": "https://en.wikipedia.org/wiki/Earth#Surface"
   },
+  "color": "#6D2ED5",
   "rotation": "0.99 Days",
   "revolution": "365.26 Days",
   "radius": "6,371 KM",

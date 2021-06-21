@@ -10,14 +10,14 @@ const Planet = () => {
   const [headerSize, setHeaderSize] = useState()
 
   const getData = async () => {
+    const planet = router.pathname.split('/[id]', 5)
     const url =
       window.location.origin === 'http://localhost:3000'
         ? 'http://localhost:3000/api'
         : 'https://planets-fact.vercel.app/api/'
 
-    const response = await fetch(url + router.pathname)
+    const response = await fetch(url + planet[0])
     const data = await response.json()
-    console.log(data)
     setPlanet(data)
   }
 

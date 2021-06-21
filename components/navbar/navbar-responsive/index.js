@@ -26,22 +26,50 @@ const NavbarResponsive = () => {
           <NavLinkResponsive
             title="mercury"
             dotColor="#DEF4FC"
-            href="/mercury"
+            href="/mercury/overview"
+            onClick={() => setToggle(!toggle)}
           />
-          <NavLinkResponsive title="venus" dotColor="#F7CC7F" href="/venus" />
-          <NavLinkResponsive title="earth" dotColor="#545BFE" href="/earth" />
-          <NavLinkResponsive title="mars" dotColor="#FF6A45" href="/mars" />
+          <NavLinkResponsive
+            title="venus"
+            dotColor="#F7CC7F"
+            href="/venus/overview"
+            onClick={() => setToggle(!toggle)}
+          />
+          <NavLinkResponsive
+            title="earth"
+            dotColor="#545BFE"
+            href="/earth/overview"
+            onClick={() => setToggle(!toggle)}
+          />
+          <NavLinkResponsive
+            title="mars"
+            dotColor="#FF6A45"
+            href="/mars/overview"
+            onClick={() => setToggle(!toggle)}
+          />
           <NavLinkResponsive
             title="jupiter"
             dotColor="#ECAD7A"
-            href="/jupiter"
+            href="/jupiter/overview"
+            onClick={() => setToggle(!toggle)}
           />
-          <NavLinkResponsive title="saturn" dotColor="#FCCB6B" href="/saturn" />
-          <NavLinkResponsive title="uranus" dotColor="#65F0D5" href="/uranus" />
+          <NavLinkResponsive
+            title="saturn"
+            dotColor="#FCCB6B"
+            href="/saturn/overview"
+            onClick={() => setToggle(!toggle)}
+          />
+          <NavLinkResponsive
+            title="uranus"
+            dotColor="#65F0D5"
+            href="/uranus/overview"
+            onClick={() => setToggle(!toggle)}
+          />
           <NavLinkResponsive
             title="neptune"
             dotColor="#497EFA"
-            href="/neptune"
+            href="/neptune/overview"
+            onClick={() => setToggle(!toggle)}
           />
         </ul>
       </nav>

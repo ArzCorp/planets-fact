@@ -12,6 +12,7 @@
     "content": "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.",
     "source": "https://en.wikipedia.org/wiki/Mars#Surface_geology"
   },
+  "color": "#D14C32",
   "rotation": "1.03 Days",
   "revolution": "1.88 Years",
   "radius": "3,389.5 KM",
