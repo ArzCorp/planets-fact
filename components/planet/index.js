@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import PlanetDetails from './planet-description'
+import PlanetDescription from './planet-description'
 import PlanetStats from './planet-stats'
 
 const Planet = () => {
@@ -17,6 +17,7 @@ const Planet = () => {
 
     const response = await fetch(url + router.pathname)
     const data = await response.json()
+    console.log(data)
     setPlanet(data)
   }
 
@@ -39,8 +40,8 @@ const Planet = () => {
     >
       {planet ? (
         <>
-          <PlanetDetails planetData={planet} />
-          <PlanetStats />
+          <PlanetDescription planetData={planet} />
+          <PlanetStats planetData={planet} />
         </>
       ) : (
         <h2>Cargando</h2>
