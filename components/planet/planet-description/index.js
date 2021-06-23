@@ -34,6 +34,7 @@ const PlanetDescription = ({ planetData }) => {
         content: planetData.geology.content,
         source: planetData.geology.source,
         img: url + planetData.images.geology,
+        planet: url + planetData.images.planet,
       })
     }
   }, [query.id])
@@ -41,9 +42,20 @@ const PlanetDescription = ({ planetData }) => {
   return (
     <div className="text-white font-spartan pt-24 md:pt-56 lg:pt-48 pb-0 lg:pb-22">
       <div className="block lg:flex w-11/12 lg:w-10/12 mx-auto">
-        <div className="w-full lg:w-7/12 xl:w-8/12 flex items-center pb-24 md:pb-32 lg:pb-0">
+        <div className="relative w-full lg:w-7/12 xl:w-8/12 flex items-center pb-24 md:pb-32 lg:pb-0">
           <img
-            className="m-auto max-w-52-md md:max-w-52-xl"
+            className={`${
+              query.id === 'geology' ? 'block' : 'hidden'
+            } m-auto max-w-10/12`}
+            src={data.planet}
+          />
+          <img
+            className={`${
+              query.id === 'geology'
+                ? 'absolute m-auto max-w-2/12 bottom-16 xl:bottom-0'
+                : 'm-auto max-w-11/12'
+            } hidden lg:block`}
+            style={{ right: '41.80%' }}
             src={data.img}
             alt={data.name}
           />
