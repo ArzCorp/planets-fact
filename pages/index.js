@@ -1,9 +1,12 @@
-import Planet from 'components/planet'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Home() {
-  return (
-    <>
-      <Planet />
-    </>
-  )
+  const router = useRouter()
+
+  useEffect(() => {
+    router.push('/mercury/overview')
+  }, [])
+
+  return <></>
 }

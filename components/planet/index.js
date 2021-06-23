@@ -3,10 +3,12 @@ import { useRouter } from 'next/router'
 
 import PlanetDescription from './planet-description'
 import PlanetStats from './planet-stats'
+import Loader from 'components/loader'
 
 const Planet = () => {
   const router = useRouter()
-  const [planet, setPlanet] = useState()
+  const [loading, setLoading] = useState(true)
+  const [planet, setPlanet] = useState({})
   const [headerSize, setHeaderSize] = useState()
 
   const getData = async () => {
@@ -19,6 +21,7 @@ const Planet = () => {
     const response = await fetch(url + planet[0])
     const data = await response.json()
     setPlanet(data)
+    setLoading(false)
   }
 
   useEffect(() => {
@@ -38,13 +41,13 @@ const Planet = () => {
         minHeight: `calc(100vh - ${headerSize}px)`,
       }}
     >
-      {planet ? (
+      {loading ? (
+        <Loader />
+      ) : (
         <>
           <PlanetDescription planetData={planet} />
           <PlanetStats planetData={planet} />
         </>
-      ) : (
-        <h2>Cargando</h2>
       )}
     </section>
   )
