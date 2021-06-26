@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import PlanetNavbar from '../planet-navbar'
+import PlanetNavbarResponsive from '../planet-navbar/planet-navbar-responsive'
 
 const PlanetDescription = ({ planetData }) => {
   const { query } = useRouter()
@@ -40,7 +41,11 @@ const PlanetDescription = ({ planetData }) => {
   }, [query.id])
 
   return (
-    <div className="text-white font-spartan pt-24 md:pt-56 lg:pt-48 pb-0 lg:pb-22">
+    <div className="text-white font-spartan pt-0 md:pt-56 lg:pt-48 pb-0 lg:pb-22">
+      <PlanetNavbarResponsive
+        planet={planetData.name.toLowerCase()}
+        color={planetData.color}
+      />
       <div className="block lg:flex w-11/12 lg:w-10/12 mx-auto">
         <div className="relative w-full lg:w-7/12 xl:w-8/12 flex items-center pb-24 md:pb-32 lg:pb-0">
           <img

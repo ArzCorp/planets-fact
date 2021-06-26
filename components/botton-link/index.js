@@ -28,13 +28,11 @@ const ButtonLink = ({
       }}
     >
       <a
-        className={`${isDisabled} ${isLowercase} ${isUppercase} ${textColor} ${bgColor} block font-spartan border border-white border-opacity-30 hover:bg-grey-dark focus:bg-blue-own pl-7 md:pl-5 lg:pl-7-lg xl:pl-7-xl py-4 md:py-2 lg:py-4-lg xl:py-4-xl mb-4 md:mb-4-md lg:mb-4-lg xl:mb-4-xl text-sm md:text-xs lg:text-sm-lg xl:text-sm-xl leading-lg md:leading-xl lg:leading-lg-lg xl:leading-lg-xl`}
+        className={`${isDisabled} ${isLowercase} ${isUppercase} ${textColor} ${bgColor} block font-spartan border-0 md:border text-center md:text-left border-white border-opacity-30 hover:bg-grey-dark focus:bg-blue-own pl-0 md:pl-5 lg:pl-7-lg xl:pl-7-xl py-4 md:py-2 lg:py-4-lg xl:py-4-xl mb-0 md:mb-4-md lg:mb-4-lg xl:mb-4-xl text-xs md:text-xs lg:text-sm-lg xl:text-sm-xl leading-lg md:leading-xl lg:leading-lg-lg xl:leading-lg-xl`}
         onClick={onClick}
         id={id}
       >
-        <span
-          className={`${haveAccountant} pointer-events-none mr-6 md:mr-6-md lg:mr-6-lg xl:mr-6-xl`}
-        >
+        <span className={`${haveAccountant} pointer-events-none mr-0 md:mr-6`}>
           {accountant}
         </span>
         <span className="pointer-events-none font-bold">{title}</span>
