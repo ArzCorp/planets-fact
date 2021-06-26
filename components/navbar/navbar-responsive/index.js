@@ -20,7 +20,7 @@ const NavbarResponsive = () => {
       </button>
       <nav>
         <ul
-          className={`${isVisible} bg-dark absolute left-0 right-0`}
+          className={`${isVisible} bg-dark absolute z-50 min-h-screen left-0 right-0`}
           style={{ top: `${navbarHeight}px` }}
         >
           <NavLinkResponsive
