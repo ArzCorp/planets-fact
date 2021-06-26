@@ -47,14 +47,14 @@ const PlanetDescription = ({ planetData }) => {
             className={`${
               query.id === 'geology' ? 'block' : 'hidden'
             } m-auto max-w-10/12`}
-            src={data.planet}
+            src={query.id === 'geology' ? data.planet : data.img}
           />
           <img
             className={`${
               query.id === 'geology'
                 ? 'absolute m-auto max-w-2/12 bottom-16 xl:bottom-0'
                 : 'm-auto max-w-11/12'
-            } hidden lg:block`}
+            } block`}
             style={{ right: '41.80%' }}
             src={data.img}
             alt={data.name}
