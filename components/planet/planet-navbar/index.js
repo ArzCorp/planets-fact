@@ -1,21 +1,15 @@
 import { useEffect, useState } from 'react'
 
 import ButtonLink from 'components/botton-link'
+import { useRouter } from 'next/router'
 
 const PlanetNavbar = ({ color, planet }) => {
-  const [active, setActive] = useState()
+  const router = useRouter()
+  const [active, setActive] = useState({})
 
   useEffect(() => {
-    const tab = document.querySelector('#overview')
-    setActive(tab)
-    tab.style = `background-color: ${color}`
+    setActive(router.query.id)
   }, [])
-
-  const changeActive = (element) => {
-    active.style = 'background-color: transparent'
-    element.style = `background-color: ${color}`
-    setActive(element)
-  }
 
   return (
     <div className="hidden md:block w-4/12 lg:w-full">
@@ -23,10 +17,11 @@ const PlanetNavbar = ({ color, planet }) => {
         id="overview"
         href={`/${planet}/overview`}
         title="OVERVIEW"
+        bgColor={active === 'overview' ? color : 'transparent'}
         accountant="01"
         uppercase={true}
-        onClick={(e) => {
-          changeActive(e.target)
+        onClick={() => {
+          setActive('overview')
         }}
       />
       <ButtonLink
@@ -34,16 +29,18 @@ const PlanetNavbar = ({ color, planet }) => {
         href={`/${planet}/structure`}
         title="Internal Structure"
         accountant="02"
+        bgColor={active === 'structure' ? color : 'transparent'}
         uppercase={true}
-        onClick={(e) => changeActive(e.target)}
+        onClick={() => setActive('structure')}
       />
       <ButtonLink
         id="geology"
         href={`/${planet}/geology`}
         title="Surface Geology"
+        bgColor={active === 'geology' ? color : 'transparent'}
         accountant="03"
         uppercase={true}
-        onClick={(e) => changeActive(e.target)}
+        onClick={(e) => setActive('geology')}
       />
     </div>
   )
