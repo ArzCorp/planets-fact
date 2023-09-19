@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -11,6 +12,64 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      colors: {
+        white: '#FFFFFF',
+        dark: '#070724',
+        'light-grey': '#838391',
+        grey: '#38384F',
+        'light-blue': '#419EBB',
+        blue: '#2d68f0',
+        'light-orange': '#EDA249',
+        orange: '#CD5120',
+        purple: '#6f2ed6',
+        'light-red': '#D14C32',
+        red: '#D83A34',
+        green: '#1ec2a4',
+      },
+      fontSize: {
+        h1: [
+          '5rem',
+          {
+            lineHeight: '6.43rem',
+            fontWeight: '500',
+          },
+        ],
+        h2: [
+          '2.5rem',
+          {
+            lineHeight: '3.25',
+            letterSpacing: '-0.09rem',
+            fontWeight: '500',
+          },
+        ],
+        h3: [
+          '0.75rem',
+          {
+            lineHeight: '1.56rem',
+            letterSpacing: '+0.16rem',
+            fontWeight: '700',
+          },
+        ],
+        h4: [
+          '0.6875rem',
+          {
+            lineHeight: '1.56rem',
+            letterSpacing: '+0.06rem',
+            fontWeight: '700',
+          },
+        ],
+        body: [
+          '0.875rem',
+          {
+            lineHeight: '1.56rem',
+            fontWeight: '400',
+          },
+        ],
+      },
+      fontFamily: {
+        antonio: ['var(--font-antonio)'],
+        spartan: ['var(--font-spartan)'],
       },
     },
   },
