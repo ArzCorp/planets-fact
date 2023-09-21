@@ -28,6 +28,13 @@ module.exports = {
         green: '#1ec2a4',
       },
       fontSize: {
+        logo: [
+          '1.75rem',
+          {
+            letterSpacing: '-0.065625rem',
+            fontWeight: '500',
+          },
+        ],
         h1: [
           '5rem',
           {
