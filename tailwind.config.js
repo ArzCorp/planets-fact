@@ -73,6 +73,14 @@ module.exports = {
             fontWeight: '400',
           },
         ],
+        navbar: [
+          '0.938rem',
+          {
+            fontWeight: '700',
+            lineHeight: '1.563rem',
+            letterSpacing: '0.085rem',
+          },
+        ],
       },
       fontFamily: {
         antonio: ['var(--font-antonio)'],
