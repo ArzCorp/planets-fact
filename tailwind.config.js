@@ -81,6 +81,13 @@ module.exports = {
             letterSpacing: '0.085rem',
           },
         ],
+        'navbar-planet': [
+          '0.5625rem',
+          {
+            fontWeight: '700',
+            letterSpacing: '0.120625rem',
+          },
+        ],
       },
       fontFamily: {
         antonio: ['var(--font-antonio)'],
