@@ -1,7 +1,23 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import { Antonio, League_Spartan } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+config.autoAddCss = false
+
+import Header from './components/Header'
+
+const spartan = League_Spartan({
+  subsets: ['latin'],
+  weight: ['500', '700', '400'],
+  variable: '--font-spartan',
+})
+
+const antonio = Antonio({
+  subsets: ['latin'],
+  weight: ['500', '700', '400'],
+  variable: '--font-antonio',
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +27,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${antonio.variable} ${spartan.variable}`}>
+        <main className="bg-dark text-white min-h-screen w-screen">
+          <Header />
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
