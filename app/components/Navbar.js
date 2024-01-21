@@ -4,23 +4,19 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
-import NavbarMenu from './NavbarMenu'
+import Menu from './Menu'
+import { ANIMATIONS } from '../utils/constants/animations'
 
 export default function Navbar() {
-  const [openNavbar, setOpenNavbar] = useState(false)
-  const [animation, setAnimation] = useState('animate-fade-in')
-  const menuOpenStyles = openNavbar ? 'text-[#979797]' : 'text-white'
+  const [animation, setAnimation] = useState('hidden')
+  const menuOpenStyles =
+    animation === ANIMATIONS.FADE_IN ? 'text-[#979797]' : 'text-white'
 
   const toggleMenu = () => {
-    if (openNavbar) {
-      setAnimation('animate-fade-out')
-    } else {
-      setAnimation('animate-fade-in')
-    }
-
-    setTimeout(() => {
-      setOpenNavbar(!openNavbar)
-    }, 300)
+    setAnimation((currentAnimation) => {
+      if (currentAnimation === ANIMATIONS.FADE_IN) return ANIMATIONS.FADE_OUT
+      return ANIMATIONS.FADE_IN
+    })
   }
 
   return (
@@ -31,9 +27,7 @@ export default function Navbar() {
           className={`text-[25px] ${menuOpenStyles} transition-colors duration-300`}
         />
       </button>
-      {openNavbar ? (
-        <NavbarMenu handleMenuClick={toggleMenu} animation={animation} />
-      ) : null}
+      <Menu handleMenuClick={toggleMenu} animation={animation} />
     </nav>
   )
 }
